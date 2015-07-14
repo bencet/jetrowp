@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Page Home
+ * Template Name: Page Portfolio
  *
- * The template for displaying home page
+ * The template for displaying portfolio page
  *
  * It is a custom template made by Bence.
  */
@@ -50,4 +50,5 @@ get_header(); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+
 <?php get_footer(); ?>

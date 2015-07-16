@@ -4,9 +4,6 @@
  *
  * Displays all of the head element and everything up until the "site-content" div.
  *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -15,23 +12,31 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
-	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+
+<div class="line"> </div>
+<div class="container">
+<div class="header">
+	<a href="http://aidea.hu/bence/"> <h2>JET<span>RO</span></h2></a>
+	<nav id="mobile-menu">
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="menu">
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<?php
 					// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
 						'theme_location' => 'primary',
-					) );
-				?>
-			</nav><!-- .main-navigation -->
+					) );	?>
 		<?php endif; ?>
-	<div id="content" class="site-content">
+		</ul>
+	</nav>
+</div>
+<div class="clear"></div>

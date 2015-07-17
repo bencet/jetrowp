@@ -113,7 +113,7 @@ table {
 		}
 		.slider  {
 			width: 100%;
-			margin-top: 22px;
+			margin-top: 6px;
 			position: relative;
 		}
 		.caroufredsel_wrapper {
@@ -424,7 +424,7 @@ table {
 		color: #404040;
 	}
 	.midlineb {
-		background-image: url(img/line2.png);
+		background-image: url(http://aidea.hu/jetrowp/wp-content/uploads/2015/07/line2.png);
 		height: 15px;
 		margin-top: 50px;
 	}
@@ -480,13 +480,12 @@ table {
 /* Sidebar formatting */
 
 	.sidebar {
-		margin-top: 55px;
 		width: 220px;
 		float: left;
 		margin-left: 50px;
 	}
 	.midlines {
-		background-image: url(img/line2.png);
+		background-image: url(http://aidea.hu/jetrowp/wp-content/uploads/2015/07/line2.png);
 		height: 15px;
 	}
 	.midlines span {
@@ -529,7 +528,7 @@ table {
 	.acontainer{
 		margin-top: 53px;
 		width: 940px;
-		height: 100px;
+		height: 50px;
 	}
 	.acontainer1{
 		margin-top: 30px;

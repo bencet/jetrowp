@@ -135,8 +135,8 @@ function twentyfifteen_widgets_init() {
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="midlines"><span>',
+		'after_title'   => '</span></div>',
 	) );
 }
 add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
@@ -353,3 +353,18 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Formatted title print out
+ *
+ * @made by Bence
+ */
+
+function get_line1() {
+		echo '<div class="line1">
+				<h3>';
+		echo get_the_title(); 
+				
+		echo	'</h3>
+			</div> ';	
+}

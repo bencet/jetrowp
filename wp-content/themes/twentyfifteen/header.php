@@ -40,3 +40,6 @@
 	</nav>
 </div>
 <div class="clear"></div>
+<?php if ( ! is_front_page() ) : ?>
+	<?php get_line1(); ?>
+<?php endif; ?>

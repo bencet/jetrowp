@@ -364,7 +364,7 @@ table {
 	.bcontainer {
 		margin-top: 53px;
 		width: 940px;
-		height: 100px;
+		height: 50px;
 	}
 	.bcontainer1 {
 		width: 670px;
@@ -379,8 +379,7 @@ table {
 		bottom: -54px;
 	}
 	.blog{
-		position: relative;
-		top: -20px;
+		margin-top: 50px;
 	}
 	.bcontainer1 iframe {
 		position: relative;
@@ -429,8 +428,7 @@ table {
 		margin-top: 50px;
 	}
 	.quote {
-		position: relative;
-		top: -20px;
+		margin-top: 50px;
 		background-color: #f2f2f2;
 		padding: 25px;
 		padding-bottom: 15px;
@@ -448,8 +446,7 @@ table {
 		color: #404040;
 	}
 	.attachment {
-		position: relative;
-		top: -20px;
+		margin-top: 50px;
 	}
 	.tenpx{
 		margin-top:10px;
@@ -530,18 +527,22 @@ table {
 		width: 940px;
 		height: 50px;
 	}
-	.acontainer1{
-		margin-top: 30px;
+	.acontainer-inner{
+		margin-top: 55px;
 		width: 670px;
 		float: left;
+		font-size: 79%;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 135%;	
+		color: #404040;
 	}
-	.acontainer1 p{
+	/*.acontainer1 p{
 		font-size: 79%;
 		font-family: Arial, Helvetica, sans-serif;
 		line-height: 135%;	
 		color: #404040;
 		margin-top:25px;
-	}
+	}*/
 	.acontainer1 p span{
 		font-family: myFirstFont, verdana, sans-serif;
 		float:left;
@@ -688,7 +689,7 @@ table {
 	.ccontainer {
 		margin-top: 53px;
 		width: 940px;
-		height: 100px;	
+		height: 50px;	
 	}
 	.ccontainer1 {
 		margin-top: 55px;
@@ -856,7 +857,7 @@ table {
 		.line1{
 			width: 95%;
 		}
-		.acontainer1 {
+		.acontainer-inner {
 			width: calc(100% - 270px);
 		}
 		.bcontainer1 {
@@ -941,7 +942,7 @@ table {
 		.clearForMedia {
 			clear: both;
 		}
-		.acontainer1 {
+		.acontainer-inner {
 			width: 100%;
 		}
 		.sidebar {

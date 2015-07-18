@@ -7,7 +7,8 @@
  */
 
 get_header(); ?>
-
+<div class="acontainer">
+<div class="acontainer-inner">
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
@@ -18,5 +19,8 @@ get_header(); ?>
 		// End the loop.
 		endwhile;
 		?>
+	</div>
+<div class="clearForMedia"></div>
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

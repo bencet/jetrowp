@@ -20,7 +20,7 @@
 <div class="line"> </div>
 <div class="container">
 <div class="header">
-	<a href="http://aidea.hu/bence/"> <h2>JET<span>RO</span></h2></a>
+	<a href="http://aidea.hu/jetrowp/"> <h2>JET<span>RO</span></h2></a>
 	<nav id="mobile-menu">
 		<div class="hamburger">
 			<span></span>

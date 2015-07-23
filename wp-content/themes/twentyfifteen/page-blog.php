@@ -31,7 +31,10 @@ get_header(); ?>
 					</div>
 			<?php } 
 			else { ?>
-					<div class="blog">
+					<?php if ( has_post_thumbnail() ) { ?>
+						<img class="blog" <?php	the_post_thumbnail(); ?> 
+					<?php } ?>
+					<div>
 						<div class="title tmobile"><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></div>
 						<div class="dataco">
 							<p>date<br><span><?php the_time('F d, Y') ?></span></p>
@@ -41,7 +44,7 @@ get_header(); ?>
 						<div class="titcon">
 							<div class="title tdesktop"><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></div>
 							<div> <?php the_excerpt(); ?> </div>
-						</div>
+						</div>	
 					</div>
 			<?php } ?>
 			<div class="clear"></div>

@@ -389,7 +389,7 @@ table {
 		display: none;
 	}
 	.dataco{
-		margin-top:5px;
+		margin-top:25px;
 		width: 145px;
 		float: left;
 		text-transform: uppercase;
@@ -410,7 +410,7 @@ table {
 		margin-bottom: 10px;
 	}
 	.titcon {
-		margin-top:5px;
+		margin-top:25px;
 		width: 525px;
 		float: left;
 	}

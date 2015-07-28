@@ -1,0 +1,1022 @@
+/*
+Theme Name: Jetro
+Theme URI: http://aidea.hu/jetrowp/themes/jetro
+Author: Bence
+Description: Global style of the webpage.
+*/
+
+* {
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+
+	display: block;
+}
+
+body {
+
+	line-height: 1;
+}
+
+ol, ul {
+
+	list-style: none;
+}
+
+blockquote, q {
+
+	quotes: none;
+	
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+
+	content: '';
+	content: none;
+	
+}
+
+table {
+
+	border-collapse: collapse;
+	border-spacing: 0;
+	
+}
+		@font-face {
+			font-family: myFirstFont;
+			src: url(fonts/Montserrat-Regular.ttf);
+		}
+		
+		.header h2 {
+			font-family: myFirstFont, verdana, sans-serif;
+			font-weight: bold;
+			color: #e85c3c;
+		}
+		.header h2 span {
+			color: #f3af9d;
+		}
+		.header a{
+			text-decoration:none;
+		}
+		.container {
+			border-style: solid;
+			border-width: 10px;
+			border-left-color: white;
+			border-right-color: white;
+			border-bottom-width: 0px;
+			border-top-width: 0px;
+			width: 940px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.header {
+			width: 100%;	
+			margin-top: 22px;			
+		}	
+		.header * {
+			display: inline;
+		}
+		.menu {
+			float: right;
+		}
+		.menu li a {		
+			font-family: myFirstFont, verdana, sans-serif;			
+			padding-right: 25px;
+			list-style-type:none;
+			text-decoration:none;
+			color: #c3c3c3;
+			text-transform: uppercase;
+			transition: color 0.5s;			
+		}
+		.current-menu-item a{
+			color:#e85c3c !important;
+		}
+		.menu li a:hover {
+			color:#f3af9d;
+		}
+		.current-menu-item a:hover {
+			color:#e85c3c;
+		}
+		.line {
+			margin-top: 46px;
+			position: absolute;
+			width: 100%;
+			height: 60px;
+			background-color: #f1ad9b;
+			float: top;
+			z-index: -1;
+		}
+		.slider  {
+			width: 100%;
+			margin-top: 6px;
+			position: relative;
+		}
+		.caroufredsel_wrapper {
+			background-color: white;
+		}
+		.item  {
+			position: relative;				
+			width: 940px;
+			height: 400px;
+			background-repeat: no-repeat;
+		}	
+		.prev {
+			position: absolute;
+			left: 26px;
+			top: 41%;
+			z-index:9;
+		}
+		.next {
+			position: absolute;
+			right: 35px;
+			top: 41%;
+			z-index:9;
+		}
+		.prev:hover{
+			cursor: pointer;
+		}
+		.next:hover{
+			cursor: pointer;
+		}
+		.box {
+			position: absolute;
+			background-color:rgba(232,101,60,0.7);
+			width: 364px;
+			height: 74px;			
+			left: 30px;	
+			bottom: 10%;	
+			padding-left: 20px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			padding-right: 20px;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 80%;
+			line-height: 115%;
+		}
+		.box h3{
+			font-family: myFirstFont, verdana, sans-serif;
+			padding-bottom: 20px;
+			font-weight: bold;
+		}	
+		.small {
+			margin-top: 18px;			
+		}
+		.images li {
+			display: inline;
+			padding-right: 20px;
+			float: left;
+			list-style-type:none;
+			text-decoration: none;	
+		}
+		.images img {
+			height: 120px;
+			width: 140px;
+			transition: opacity 0.5s;
+		}
+		.images img:hover {
+			opacity: 0.7;
+			cursor: pointer;
+		}
+		.small ul li:last-child {
+			padding-right: 0px;
+		}
+		.features {		
+			width: 100%;			
+		}		
+		.items {			
+			width: 290px;
+			padding-right: 35px;
+			float: left;	
+			margin-top: 35px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 90%;
+			line-height: 135%;
+		}
+		.items:last-child {
+			padding-right: 0px;
+		}
+		.headers {
+			display: inline;
+			padding: 8px;	
+		}
+		.icons {
+			float: left;
+			margin-right: 20px;
+		}		
+		.title {
+			text-transform: uppercase;
+			color:#e8663c;
+			font-family: myFirstFont, verdana, sans-serif;
+			font-weight: bold;		
+		}
+		.items p {
+			margin-top: 25px;
+			color: #404040;			
+		}
+		.button a {
+			text-decoration: none;
+			color: white;
+			background-color: #e8663c;
+			float: left;
+			margin-top: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			font-weight: bold;
+			transition: background-color 0.5s;
+		}
+		.button a:hover {
+			background-color: #f3af9d;
+		}
+		.recent{
+			padding-top:44px;
+			clear: both;
+			width: 100%;
+		}
+
+		.midline {
+			background-image: url(http://aidea.hu/jetrowp/wp-content/uploads/2015/07/line2.png);
+		}
+		.midline span {
+			color:#e8663c;
+			background-color: white;
+			display: inline-block;
+			padding-right: 20px;
+			font-family: myFirstFont, verdana, sans-serif;
+			font-weight: bold;
+		}
+		.post {
+			float: left;			
+			margin-right: 20px;
+			margin-top: 25px;
+			position: relative;
+			display: inline-block;
+		}
+		.post img {
+			width: 220px;
+			height: 183px;
+		}
+		.inpost {
+			border-style: solid;
+			border-color: #c3c3c3;
+			border-width: 1px;
+			border-top: none;
+			margin-top: -3px;
+		}
+		.post:last-child {
+			margin-right: 0px;
+		}
+		.pp1 {
+			font-family: myFirstFont, verdana, sans-serif;
+			padding-left: 15px;
+			padding-top: 12px;
+			color: #c3c3c3;
+			font-size: 90%;
+			text-transform: uppercase;
+		}
+		.pp2 {
+			font-family: myFirstFont, verdana, sans-serif;
+			padding-left: 15px;
+			padding-top: 5px;
+			padding-bottom: 12px;
+			color :#e8663c;
+			font-size: 80%;
+			text-transform: uppercase;
+		}
+		.footer {			
+			position: relative;
+			margin-top: 30px;
+			float: left;
+			width: 100%;
+			background-color: #f3B29d;			
+			z-index: -2;
+		}
+		.container2 {		
+			width: 940px;
+			margin-left: auto;
+			margin-right: auto;	
+			border-style: solid;
+			border-width: 10px;
+			border-left-color: white;
+			border-right-color: white;
+			border-bottom-width: 0px;
+			border-top-width: 0px;			
+		}
+		.foot {
+			color: white;
+			width: 253px;
+			float: left;
+			background-color: #e8663c;
+			height: 226px;	
+			padding-top: 38px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.foot h3 {
+			font-family: myFirstFont, verdana, sans-serif;
+			font-weight: bold;
+			padding-bottom: 10px;
+		}
+		.foot p {
+			font-size: 75%;
+			font-family: Arial, Helvetica, sans-serif;
+			padding-top: 15px;
+			line-height: 110%;			
+		}
+		.foot p span {
+			color:#c3c3c3;
+		}
+		.social ul li {
+			float: left;
+			list-style-type:none;
+			text-decoration: none;	
+			padding-right: 5px;			
+		}
+		.social {
+			margin-top: 18px;
+		}
+		.clear {
+			clear: both;
+		}
+
+/* From here start the style of blog.php */
+	.line1 {
+		margin-top: 22px;
+		position: absolute;
+		width: 940px;
+		height: 60px;
+		background-color: #e85c3c;
+		float: top;
+	}
+	.line1 h3 {
+		color: white;
+		padding: 20px;
+		font-family: myFirstFont, verdana, sans-serif;
+		text-transform: uppercase;
+	}
+	.bcontainer {
+		margin-top: 53px;
+		width: 940px;
+		height: 50px;
+	}
+	.bcontainer1 {
+		width: 670px;
+		float: left;
+	}
+	.bcontainer1 img {
+		float: left;
+	}
+	.type{	
+		position: relative;
+		left: -84px;
+		bottom: -54px;
+	}
+	.blog{
+		margin-top: 50px;
+	}
+	.bcontainer1 iframe {
+		position: relative;
+		top: -20px;
+	}
+	.tmobile {
+		display: none;
+	}
+	.dataco{
+		margin-top:25px;
+		width: 145px;
+		float: left;
+		text-transform: uppercase;
+		color:#e8663c;
+		font-family: myFirstFont, verdana, sans-serif;
+		font-weight: bold;
+		font-size: 90%;
+		line-height: 135%;
+	}
+	.dataco span{
+		font-family: Arial, Helvetica, sans-serif;
+		color: #c3c3c3;
+		font-size: 85%;
+		text-transform: none;
+		font-weight: normal;
+	}
+	.dataco p {
+		margin-bottom: 10px;
+	}
+	.titcon {
+		margin-top:25px;
+		width: 525px;
+		float: left;
+	}
+	.titcon p{
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		padding-top: 20px;
+		line-height: 135%;	
+		text-align: justify;
+		color: #404040;
+	}
+	.midlineb {
+		background-image: url(http://aidea.hu/jetrowp/wp-content/uploads/2015/07/line2.png);
+		height: 15px;
+		margin-top: 50px;
+	}
+	.quote {
+		margin-top: 50px;
+		background-color: #f2f2f2;
+		padding: 25px;
+		padding-bottom: 15px;
+	}
+	.quote img {
+		position: relative;
+		top: -10px;
+	}
+	.quote p {
+		margin-left: 45px;
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: italic;
+		line-height: 135%;
+		color: #404040;
+	}
+	.attachment {
+		margin-top: 50px;
+	}
+	.tenpx{
+		margin-top:10px;
+	}
+	.attachment p {
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-top: 25px;
+		color: #404040;
+	}
+	.title a {
+		text-transform: uppercase;
+		text-decoration: none;
+		color:#e8663c;
+		font-family: myFirstFont, verdana, sans-serif;
+		font-weight: bold;	
+	}
+	.bcontainer1 ul {
+		margin-top:40px;		
+	}
+	.bcontainer1 ul li {
+		padding: 2px;
+		padding-bottom:15px;
+		float: left;
+		list-style-type:none;
+		text-decoration:none;
+		display: inline;
+	}
+/* Sidebar formatting */
+
+	.sidebar {
+		width: 220px;
+		float: left;
+		margin-left: 50px;
+	}
+	.midlines {
+		background-image: url(http://aidea.hu/jetrowp/wp-content/uploads/2015/07/line2.png);
+		height: 15px;
+	}
+	.midlines span {
+		color:#e8663c;
+		background-color: white;
+		display: inline-block;
+		padding-right: 20px;
+		font-family: myFirstFont, verdana, sans-serif;
+		font-weight: bold;
+		font-size: 95%;	
+	}
+	.sidebar p {
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		padding-top: 20px;
+		padding-bottom: 35px;
+		line-height: 125%;	
+		color: #404040;
+	}
+	.sidebar ul {
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		padding-top: 20px;
+		padding-bottom: 35px;
+		line-height: 125%;	
+	}
+	.sidebar li a {
+		text-decoration: none;
+		color: #404040;
+	}
+	.imagesb ul li {
+		float: left;
+		list-style-type:none;
+		text-decoration:none;
+		padding-right: 6px;
+		padding-bottom: 6px;
+		transition: opacity 0.5s;
+	}
+	.imagesb ul li:last-child {
+		padding-right: 0px;
+	}
+	.imagesb ul li:hover {
+		opacity: 0.5;
+	}
+	
+/* About_us.php formatting from here */
+
+	.acontainer{
+		margin-top: 53px;
+		width: 940px;
+		height: 50px;
+	}
+	.acontainer-inner{
+		margin-top: 55px;
+		width: 670px;
+		float: left;
+		font-size: 79%;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 135%;	
+		color: #404040;
+	}
+	.acontainer1 p{
+		margin-top:25px;
+	}
+	.acontainer1 p span{
+		font-family: myFirstFont, verdana, sans-serif;
+		float:left;
+		padding:4px;
+		display:block;
+		font-size: 34px;
+		color:#e8663c;
+		font-weight: bold;
+		line-height: 70%;
+	}
+	.acontainer2 img {
+		float: left;
+		padding: 2px;
+		border-color: #cccccc;
+		border-style: solid;
+		border-width: 2px;
+		margin-right: 25px;
+		
+	}
+	.acontainer1 blockquote {
+		margin-left: 55px;
+		border-color: #e8663c;
+		border-style: solid;
+		border-left-width: 7px;
+		padding-left: 18px;
+		font-style: italic;
+		color: #8f8f8f;
+	}
+	.prism2 {
+		float:left;
+		width:47%;
+		margin-right:6%;
+	}
+	.prism2:last-child{
+		margin-right:0px;
+	}
+	.prism3{
+		float:left;
+		width:30%;
+		margin-right:5%;
+		margin-bottom:15px;
+	}
+	.prism3:last-child{
+		margin-right:0px;
+	}
+	.atext{
+		font-family: Arial, Helvetica, sans-serif;
+		width:100%;
+		text-align: center;
+		font-size: 14px;
+		font-style: italic;
+		border-style: solid;
+		border-width: 1px;
+		margin-top: 18px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.green{
+		border-color: #98c603;
+		color: #98c603;
+		background-color: #effeb9;
+	}
+	.red{
+		border-color: #eb533b;
+		color: #eb533b;
+		background-color: #fbcbc1;
+	}
+	.orange{
+		border-color: #fcb319;
+		color: #fcb319;
+		background-color: #ffe9ad;
+	}
+	.blue{
+		border-color: #4e90cc;
+		color: #4e90cc;
+		background-color: #d1e4f3;
+		margin-bottom:10px;
+	}
+
+/* Portfolio formatting from here */
+
+	.pcontainer{
+		margin-top: 108px;
+		width: 940px;
+		height: 100px;	
+	}
+	.pcontainer ul li {
+		display: inline;
+		font-family: myFirstFont, verdana, sans-serif;
+		margin-top: 120px;
+		padding: .3em .3em;	
+		text-transform: uppercase;
+	}
+	.pcontainer ul li a {
+		color: #c3c3c3;	
+		list-style-type:none;
+		text-decoration:none;
+		transition: color 0.5s;
+		padding: .3em .3em;	
+	}
+	.pcontainer ul li a:hover{
+		color: #e85c3c;
+	}
+	.pcontainer  {
+		margin-bottom:9px;
+	}
+	.pcontainer ul li a.selected {
+		background-color: #e85c3c;
+		color: #FFF;
+	}
+	.ppost {
+		width: 220px;
+		float: left;			
+		margin-right: 20px;
+		margin-top: 25px;
+		position: relative;
+		display: inline-block;
+		
+	}
+	.ppost:before{
+		content: '';
+		display: block;
+		width: 220px; 
+		height: 183px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: opacity 0.5s;
+		opacity: 0;
+	}	
+	.ppost:hover:before {			
+ 		background-image: url(img/portfolio.jpg);
+		opacity: 0.7;
+	}
+	.ppostp {	
+		margin-right: 0px;
+	}
+	.ppost:last-child{
+		margin-right: 0px;
+	}
+	
+/*  Contact us formatting */
+
+	.ccontainer {
+		margin-top: 53px;
+		width: 940px;
+		height: 50px;	
+	}
+	.ccontainer1 {
+		margin-top: 55px;
+		width: 670px;
+		float: left;
+	}
+	.ccontainer2{
+		float: left;
+		width: 180px;
+		margin-top:35px;
+	}
+	.ccontainer2 p{
+		padding-bottom:15px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #404040;
+		line-height: 125%;	
+	}
+	.map {
+		width: 100%;
+		height: 400px;
+	}
+	.orangec{
+		color:#e8663c;	
+	}
+	.bold{
+		font-weight: bold;
+	}
+	.input{
+		margin-top:35px;
+		width: 460px;
+		float: left;
+		margin-left: 30px;
+	}
+	.input input {
+		text-transform:uppercase;
+		padding-left:12px;
+		padding-top:12px;
+		font-size: 12px;
+		margin-bottom:15px;
+		font-weight:bold;
+	}
+	input[type=text]{
+		font-family: myFirstFont, verdana, sans-serif;
+		color:#e8663c;
+		border-color:#e8663c;
+		border-width:1px;
+		border-style:solid;
+		padding-bottom:12px;
+	}
+	input[name=data]{
+		width:215px;
+	}
+	.input textarea{
+		width: 100%;
+		height: 205px;
+		font-family: myFirstFont, verdana, sans-serif;
+		color:#e8663c;
+		border-color:#e8663c;
+		border-width:1px;
+		border-style:solid;
+		text-transform:uppercase;
+		padding-left:12px;
+		padding-top:12px;
+		font-size: 12px;
+		font-weight:bold;
+		margin-bottom:15px;
+		min-width:215px;
+	}
+	input[type=submit]{
+		color:white;
+		background-color:#e8663c;
+		padding-right:12px;
+		padding-bottom:12px;
+		transition: background-color 0.5s;
+	}
+	input[type=submit]:hover{
+		background-color: #f3af9d;;
+	}
+	::-webkit-input-placeholder{
+		color:#e8663c;
+	}
+	:-moz-placeholder { 
+		color:#e8663c;
+	}
+	::-moz-placeholder { 
+		color:#e8663c;
+	}
+	:-ms-input-placeholder {  
+		color:#e8663c;
+	}
+	.hamburger{
+		margin-top: 2px;
+		display: none;
+		float: right;
+		margin-right: 15px;
+		width: 30px;
+	}
+	.hamburger span {
+		width: 30px;
+		height: 5px;
+		border-radius: 5px;
+		background-color: #e85c3c;		
+		float:left;
+		margin-bottom: 3px;
+	}
+	
+	@media only screen and (max-width: 1120px) {
+		.type {
+			display: none;
+		}
+		.bcontainer1 {
+			margin-top: 30px;
+		}
+		.blog {
+			position: static;
+			margin-top: 25px;
+		}
+		.bcontainer1 iframe {
+			position: static;
+			margin-top: 25px;
+		}
+		.dataco {
+			margin-top: 25px;
+		}
+		.titcon {
+			margin-top: 25px;
+		}
+		.quote {
+			position: static;
+			margin-top: 25px;
+		}
+		.attachment {
+			position: static;
+			margin-top: 25px;
+		}
+		.midlineb {
+			margin-bottom: 30px;
+		}
+	}
+/* Media queries: portfolio with 3 image in a row. */	
+	
+	@media only screen and (max-width: 975px) {
+		.item {
+			background-size: 100%;
+		}
+		.container {
+			width: 95%;
+		}
+		.container2 {
+			width: 95%;
+		}
+		.pcontainer {
+			width: 100%;
+		}
+		.acontainer {
+			width: 100%;
+		}
+		.bcontainer {
+			width: 100%;
+		}
+		.ccontainer {
+			width: 100%
+		}
+		.line1{
+			width: 95%;
+		}
+		.acontainer-inner {
+			width: calc(100% - 270px);
+		}
+		.bcontainer1 {
+			width: calc(100% - 270px);
+		}
+		.titcon {
+			width: calc(100% - 145px);
+		}
+		.ccontainer1 {
+			width: calc(100% - 270px);
+		}
+		.input {
+			width: calc(100% - 230px);
+		}
+		.images li{
+			padding-right: 2%;
+			width: 15%;
+		}
+		.small ul li:last-child {
+			padding-right: 0px;
+		}
+		.images img {
+			width: 100%;
+			height: auto;
+		}
+		.blog {
+			width: 100%;
+		}
+		.bcontainer1 iframe {
+			width: 100%;
+		}
+		.foot {
+			width: 27.1%;
+			padding-left: 3.1%;
+			padding-right: 3.1%;
+		}
+		.items {			
+			width: 31%;
+			padding-right: 3.5%;
+		}
+		.items:last-child {
+			padding-right: 0px;
+		}	
+	}
+	
+	@media only screen and (max-width: 768px) {
+		.hamburger {
+			display: inline-block;
+		}
+		#mobile-menu ul{
+			display: none;
+			list-style: none;	
+			margin-top: 6px;			
+		}
+		#mobile-menu ul li {
+			border-top: 1px solid #ccc;
+			margin-right: 40px;	
+			display: block;
+			padding: 6px;
+		}
+		.line {
+			display: none;
+		}
+	}
+	
+/* Media queries: portfolio with 2 image in a row. */ 
+
+	@media only screen and (max-width: 720px) {
+		.box {
+			display: none;
+		}
+		.foot {
+			width: 94%;
+			height: auto;
+		}
+		.items {
+			width: 95%;
+		}
+		.bcontainer1{
+			width: 100%;
+		}
+		.clearForMedia {
+			clear: both;
+		}
+		.acontainer-inner {
+			width: 100%;
+		}
+		.sidebar {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.ccontainer1 {
+			width: 100%;
+		}
+		.map {
+			width: 100%;
+			height: 200px;
+		}
+		.ccontainer2 {
+			width: 100%;
+		}
+		.input {
+			margin-left: 0px;
+		}
+	}
+
+/* Media queries: portfolio with 1 image in a row. */
+	
+	@media only screen and (max-width: 485px) {
+		.images li{
+			padding: 0 5% 5% 0;
+			width: 30%;
+		}
+		.images li:nth-child(3) {
+			padding-right: 0px;
+		}
+		.small ul li:last-child {
+			padding-right: 0px;
+		}
+		.tmobile {
+			display: block;
+			margin-top: 10px;
+		}
+		.tdesktop {
+			display: none;
+		}
+		.titcon {
+			float: none;
+			width: auto !important;	
+			margin-top: 0px;
+		}
+		.dataco {
+			margin-top: 0px;
+			padding-top: 20px;
+		}
+		.blog {
+			position: relative;
+			top: -10px;
+		}		
+		.input {
+			width: calc(100% - 24px);
+		}
+		input[name=data]{
+			width:100%;
+		}	
+		.pcontainer ul{
+			line-height: 30px;
+		}
+		.prism2 {
+			width: 100%;
+		}
+		.prism3 {
+			width: 100%;
+		}
+	}
+	

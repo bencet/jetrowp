@@ -1,14 +1,15 @@
 <?php
 /**
- * The template for displaying all single posts and attachments
+ * The template for displaying pages
+ *
+ * This is the template that displays all pages by default.
  *
  */
 
 get_header(); ?>
 <div class="acontainer">
 <div class="acontainer-inner">
-
-	<?php
+		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
@@ -18,7 +19,7 @@ get_header(); ?>
 		// End the loop.
 		endwhile;
 		?>
-</div>
+	</div>
 <div class="clearForMedia"></div>
 </div>
 <?php get_sidebar(); ?>

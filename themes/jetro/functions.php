@@ -106,10 +106,15 @@ add_action( 'wp_enqueue_scripts', 'jetro_scripts' );
  */
 
 function get_line1() {
-		echo '<div class="line1">
-				<h3>';
-		echo get_the_title(); 
-				
-		echo	'</h3>
-			</div> ';	
+		echo '<div class="line1">';
+        if( is_home() && get_option('page_for_posts') ) {
+		echo '<h3>'
+		echo apply_filters( 'the_title',get_the_title( get_option('page_for_posts') ) );		
+		echo '</h3>';
+		} elseif( is_singular() ) { 
+		echo '<h3>' ;
+		the_title(); 
+		echo	'</h3>';
+		 }
+		echo '</div> ';	
 }

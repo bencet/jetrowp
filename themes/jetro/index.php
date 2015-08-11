@@ -18,10 +18,9 @@ get_header(); ?>
 			
 			if ( has_post_format( 'quote' )) { ?>
 					<div class="quote">
-						<img src="http://aidea.hu/jetrowp/wp-content/uploads/2015/07/qu.jpg">
-						<p>
-					<?php the_excerpt(); ?>
-					</p></div>
+						<img src="images/qu.jpg">
+						<p>	<?php the_excerpt(); ?>	</p>
+					</div>
 			<?php }		
 			else if ( has_post_format( 'link' )) {  ?>
 					<div class="attachment">

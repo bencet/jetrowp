@@ -18,14 +18,25 @@ get_header(); ?>
 			<li><a href="#" id="filter-wordpress" class="filter">wordpress</a></li>
 		</ul>
 	<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-
-			// Include the page content template.
-			the_content();
+		$args = array( 'post_type' => 'portfolio', );
+		$portfolios = new WP_Query( $args );
+		$i=0;		
+		
+		while ( $portfolios->have_posts() ) : $portfolios->the_post(); 		
+	
+			$i++;
+			echo '<div class="ppost _'.$i; 
+			if($i%4==0) {echo ' ppostp">'; } else {echo '">';}
 			
-		// End the loop.
-		endwhile;
+			the_post_thumbnail(); 
+			echo '<div class="inpost"><p class="pp1">'; 
+			the_title(); 
+			echo '</p><p class="pp2">';
+			
+			the_date(); 
+			echo '</p></div></div>';
+			
+		endwhile;	
 	?>
 </div>
 <?php get_footer(); ?>

@@ -31,8 +31,9 @@ get_header(); ?>
 			<?php } 
 			else { ?>
 					<?php if ( has_post_thumbnail() ) { ?>
-						<img class="blog" <?php	the_post_thumbnail(); ?> 
+						<img class="blog" <?php	the_post_thumbnail(); ?>
 					<?php } ?>
+					
 					<div>
 						<div class="title tmobile"><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></div>
 						<div class="dataco">

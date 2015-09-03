@@ -14,8 +14,8 @@ get_header(); ?>
 		$loop = new WP_Query( $args );	
 	?>
 	<div class="slider">
-		<img class="prev" src="images/previous.png" />
-		<img class="next" src="images/next.png" />
+		<img class="prev" src="images/previous.png">
+		<img class="next" src="images/next.png">
 		<div id="carousel">
 			<div class="item" style="background-image: url('http://aidea.hu/jetrowp/wp-content/uploads/2015/07/nagy.jpg');">
 				<div class="big">
@@ -30,7 +30,7 @@ get_header(); ?>
 		<div class="small">
 			<ul id="thumbs" class="images">
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<li><div><img <?php the_post_thumbnail() ?> </div></li>
+					<li><?php the_post_thumbnail() ?></li>
 				<?php endwhile; ?>
 			</ul>
 		</div>
@@ -70,51 +70,23 @@ Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Al
 </div>
 <div class="recent">
 <div class="midline"><span>RECENT WORKS</span></div>
-<div class="post">
 
-<img src="http://aidea.hu/jetrowp/wp-content/uploads/2015/07/port1.jpg" alt="" />
-<div class="inpost">
-<p class="pp1">character design</p>
-<p class="pp2">2012-06-15</p>
+<?php $arguments = array(
+    'numberposts' => 4,
+    'post_type' => 'portfolio' );
 
+    $recent_posts = wp_get_recent_posts( $arguments );
+	
+	foreach( $recent_posts as $recent ){
+		echo '<div class="post">'.
+				get_the_post_thumbnail($recent["ID"], 'thumbnail') .
+				'<div class="inpost">
+				<p class="pp1">' . $recent["post_title"]. '</p>
+				<p class="pp2">'.
+				date( 'F j, Y', strtotime( $recent['post_date'] ) ) .
+				'</p></div></div>';
+	}
+?>
 </div>
-</div>
-<div class="post">
-
-<img src="http://aidea.hu/jetrowp/wp-content/uploads/2015/07/port2.jpg" alt="" />
-<div class="inpost">
-<p class="pp1">brochure design</p>
-<p class="pp2">2012-06-15</p>
-
-</div>
-</div>
-<div class="post">
-
-<img src="http://aidea.hu/jetrowp/wp-content/uploads/2015/07/port3.jpg" alt="" />
-<div class="inpost">
-<p class="pp1">social media buttons</p>
-<p class="pp2">2012-06-15</p>
-
-</div>
-</div>
-<div class="post">
-
-<img src="http://aidea.hu/jetrowp/wp-content/uploads/2015/07/port4.jpg" alt="" />
-<div class="inpost">
-<p class="pp1">10 amazing websites</p>
-<p class="pp2">2012-06-15</p>
-
-</div>
-</div>
-</div>
-
-			<?php 
-			// Start the loop.
-			while ( have_posts() ) : the_post();
-				the_content();
-
-			// End the loop.
-			endwhile;
-			?>
 
 <?php get_footer(); ?>

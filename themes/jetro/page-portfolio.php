@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
 <div class="pcontainer">	
 		<ul>
 			<li><a href="#" id="filter-all" class="selected filter">all</a></li>
@@ -23,9 +22,11 @@ get_header(); ?>
 		$i=0;		
 		
 		while ( $portfolios->have_posts() ) : $portfolios->the_post(); 		
-	
+		
 			$i++;
 			echo '<div class="ppost _'.$i; 
+			$terms_of_post =strip_tags( get_the_term_list( $post->ID, 'portfolio_tag', ' ', ' ' ));
+			echo $terms_of_post;
 			if($i%4==0) {echo ' ppostp">'; } else {echo '">';}
 			
 			the_post_thumbnail(); 
@@ -33,7 +34,7 @@ get_header(); ?>
 			the_title(); 
 			echo '</p><p class="pp2">';
 			
-			the_date(); 
+			the_time( get_option( 'date_format' ) );
 			echo '</p></div></div>';
 			
 		endwhile;	

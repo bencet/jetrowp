@@ -125,6 +125,7 @@ table {
 			width: 940px;
 			height: 400px;
 			background-repeat: no-repeat;
+			margin-top: 22px;
 		}	
 		.prev {
 			position: absolute;

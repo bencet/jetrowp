@@ -50,6 +50,19 @@ function jetro_widgets_init() {
 }
 add_action( 'widgets_init', 'jetro_widgets_init' );
 
+function jetro_widgets_init2() {
+	register_sidebar( array(
+		'name'          => __( 'Footers Widget', 'jetro' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'jetro' ),
+		'before_widget' => '<div class="foot">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'jetro_widgets_init2' );
+
 if ( ! function_exists( 'jetro_fonts_url' ) ) :
 /**
  * Register Google fonts for Jetro.

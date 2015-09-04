@@ -18,7 +18,7 @@ get_header(); ?>
 			
 			if ( has_post_format( 'quote' )) { ?>
 					<div class="quote">
-						<img src="images/qu.jpg">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/qu.jpg">
 						<p>	<?php the_excerpt(); ?>	</p>
 					</div>
 			<?php }		

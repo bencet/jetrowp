@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
 				});
 			});
 				
-	/*	$('#carousel').carouFredSel({
+		$('#carousel').carouFredSel({
 			responsive: true,
 			
 			items: {					
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 			pagination: '#pager',
 			prev: '.prev',
 			next: '.next'
-		});	*/
+		});	
 	}); 
 		
 	$("a").click(function(){

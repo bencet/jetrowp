@@ -18,26 +18,45 @@ get_header(); ?>
 		<img class="prev" src="<?php bloginfo('stylesheet_directory'); ?>/images/previous.png">
 		<img class="next" src="<?php bloginfo('stylesheet_directory'); ?>/images/next.png">
 		<div id="carousel">
-			<div class="item" style="background-image: url('http://aidea.hu/jetrowp/wp-content/uploads/2015/07/nagy.jpg');">
+		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<?php if (has_post_thumbnail( $loop->ID ) ): ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->ID ), 'single-post-thumbnail' ); ?>
+			
+		
+			<div class="item" style="background-image: url('<?php echo $image[0]; ?>')">
 				<div class="big">
+				  <?php if (get_the_title()){ ?>
 					<div class="box">
-						<h3><?php while ( $loop->have_posts() ) : $loop->the_post(); 
-						$count++;
-						if ($count == 1) { 
+						<h3> 
+						<?php
 							the_title(); 
 							echo '</h3>';
-							the_content();  }							
-						endwhile;	?>
+							the_content();  				
+						?>
 					</div>
+					<?php } ?>
 				</div>
 			</div>
+			<?php endif; ?>
+		<?php endwhile;	?>
 		</div>
 		
 		<div class="small">
-			<ul id="thumbs" class="images">
-				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<li><?php the_post_thumbnail() ?></li>
-				<?php endwhile; ?>
+			<ul id="thumbs" class="images">		
+			<?php
+				if( have_rows('homeslides') ):
+				while ( have_rows('homeslides') ) : the_row();  
+					
+					$i_src = the_sub_field('img_src');
+			 ?>
+					<li><img src="<?php echo $i_src ?>">			
+			<?php
+				endwhile;	
+				endif; 
+			?>
+
+
+
 			</ul>
 		</div>
 	</div>
@@ -54,10 +73,10 @@ get_header(); ?>
 		$content = get_sub_field('content');?>
 		<div class="items">
 			<div class="headers">
-				<div><img class="icons" src="<?php $icon ?>"/></div>
-				<div class="title"><?php $title ?></div>
+				<div><img class="icons" src="<?php echo $icon; ?>"/></div>
+				<div class="title"><?php echo $title; ?></div>
 			</div>
-			<?php $content ?>
+			<?php echo $content; ?>
 			<div class="button"><a href="#">MORE</a></div>
 		</div>
 	<?php endwhile; ?>

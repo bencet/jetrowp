@@ -104,11 +104,12 @@ function jetro_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'jetro-fonts', jetro_fonts_url(), array(), null );
-
-	// Load our main stylesheet.
-	wp_enqueue_style( 'jetro-style', get_stylesheet_uri() );
 	
+	wp_enqueue_style( 'jetro-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'jetro-caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ) );
 	wp_enqueue_script( 'jetro-script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ) );
+	
+	
 }
 add_action( 'wp_enqueue_scripts', 'jetro_scripts' );
 

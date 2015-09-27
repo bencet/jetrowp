@@ -25,16 +25,16 @@ get_header(); ?>
 		
 			$i++;
 			echo '<div class="ppost _'.$i; 
-			$terms_of_post =strip_tags( get_the_term_list( $post->ID, 'portfolio_tag', ' ', ' ' ));
+			
+			$terms_of_post =strip_tags( get_the_term_list( $post->ID, 'portfolio_tag', ' ', ' ' ));			
 			echo $terms_of_post;
-			if($i%4==0) {echo ' ppostp">'; } else {echo '">';}
 			
-			the_post_thumbnail(); 
-			echo '<div class="inpost"><p class="pp1">'; 
-			the_title(); 
-			echo '</p><p class="pp2">';
-			
-			the_time( get_option( 'date_format' ) );
+			if($i%4==0) {echo ' ppostp">'; } else {echo '">';}			
+				the_post_thumbnail(); 
+				echo '<div class="inpost"><p class="pp1">'; 
+				the_title(); 
+				echo '</p><p class="pp2">';			
+				the_time( get_option( 'date_format' ) );
 			echo '</p></div></div>';
 			
 		endwhile;	

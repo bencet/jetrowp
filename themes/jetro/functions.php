@@ -18,6 +18,7 @@ function jetro_setup() {
 	// Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 825, 510, true );
+	add_image_size( 'small-slide', 140, 120, true);
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(

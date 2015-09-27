@@ -17,7 +17,7 @@ get_header(); ?>
 			<li><a href="#" id="filter-wordpress" class="filter">wordpress</a></li>
 		</ul>
 	<?php
-		$args = array( 'post_type' => 'portfolio', );
+		$args = array( 'post_type' => 'portfolio', 'posts_per_page' => '-1' );
 		$portfolios = new WP_Query( $args );
 		$i=0;		
 		

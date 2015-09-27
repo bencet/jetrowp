@@ -10,7 +10,7 @@
 get_header(); ?>
 	
 	<?php
-		$args = array( 'post_type' => 'slide', );
+		$args = array( 'post_type' => 'slide', 'posts_per_page' => '6');
 		$loop = new WP_Query( $args );	
 		$count = 0;
 	?>
@@ -42,8 +42,6 @@ get_header(); ?>
 	<?php endwhile;	?>
 	</div>
 		
-	
-		
 	<div class="small">
 		<ul id="thumbs" class="images">	
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -54,7 +52,7 @@ get_header(); ?>
 		</ul>	
 	</div>		
 </div>	
-	
+
 <div class="clear"></div>
 
 <div class="features">
@@ -83,23 +81,24 @@ get_header(); ?>
 <div class="recent">
 	<div class="midline"><span>RECENT WORKS</span></div>
 
-	<?php $arguments = array(
-		'numberposts' => 4,
-		'post_type' => 'portfolio' );
-
-		$recent_posts = wp_get_recent_posts( $arguments );
-		
-		foreach( $recent_posts as $recent ){
-			echo '<div class="post">'.
-					get_the_post_thumbnail($recent["ID"], 'thumbnail') .
-					'<div class="inpost">
-						<p class="pp1">' . $recent["post_title"]. '</p>
-						<p class="pp2">'.
-						date( 'F j, Y', strtotime( $recent['post_date'] ) ) .
-					'</p></div>
-				</div>';
-		}
+	<?php
+		$args = array( 'post_type' => 'portfolio', 'posts_per_page' => '4');
+		$loop_recent = new WP_Query( $args );	
 	?>
+
+	<?php while ( $loop_recent->have_posts() ) : $loop_recent->the_post(); ?>
+		<?php if (has_post_thumbnail( $loop_recent->ID ) ): ?>
+		
+		<div class="post">
+			<?php the_post_thumbnail(); ?>
+			<div class="inpost">
+				<p class="pp1"><?php the_title(); ?></p>
+				<p class="pp2"><?php the_time('F d, Y'); ?></p>
+			</div>
+		</div>
+		<?php endif; ?>
+	<?php endwhile;	?>
+	
 </div>
 
 <?php get_footer(); ?>

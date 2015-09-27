@@ -26,7 +26,6 @@
 			<span></span>
 			<span></span>
 		</div>
-		<ul class="menu">
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<?php
 					// Primary navigation menu.
@@ -35,7 +34,6 @@
 						'theme_location' => 'primary',
 					) );	?>
 		<?php endif; ?>
-		</ul>
 	</nav>
 </div>
 <div class="clear"></div>

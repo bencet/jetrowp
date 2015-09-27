@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	$(".hamburger").on("click", function(){
-		$(".menu").slideToggle();
+		$(".nav-menu").slideToggle();
 		$(this).toggleClass("active");
 	});
 	

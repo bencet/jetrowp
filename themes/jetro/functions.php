@@ -258,3 +258,22 @@ function portfolio_taxonomy() {
 
 }
 add_action( 'init', 'portfolio_taxonomy', 0 );
+
+function column_prism ( $atts, $content = null ) {
+	$a = shortcode_atts(array (
+			'qty' => '0',
+		), $atts);
+	
+	return '<div class="prism'.$a['qty'].'">'.do_shortcode($content).'</div>';
+}
+add_shortcode ( 'columns', 'column_prism' );
+add_shortcode ( 'column', 'column_prism' );
+
+function alert_text_color ( $atts, $content = null ) {
+	$a = shortcode_atts(array (
+			'color' => 'green',
+		), $atts);
+		
+	return '<<div class="atext '.$a['color'].'">'.$content.'</div>';
+}
+add_shortcode ( 'alert-text', 'alert_text_color' );

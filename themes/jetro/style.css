@@ -407,8 +407,45 @@ table {
 		text-transform: none;
 		font-weight: normal;
 	}
+	.dataco span a{
+		font-family: Arial, Helvetica, sans-serif;
+		color: #c3c3c3;
+		text-decoration: none;
+		font-weight: normal;
+	}
 	.dataco p {
 		margin-bottom: 10px;
+	}
+	.datacoSingle div{
+		margin-top:25px;
+		width: 30%;
+		float: left;
+		text-transform: uppercase;
+		color:#e8663c;
+		font-family: myFirstFont, verdana, sans-serif;
+		font-weight: bold;
+		font-size: 90%;
+		line-height: 135%;
+		margin-right: 5%;
+	}
+	.datacoSingle span{
+		font-family: Arial, Helvetica, sans-serif;
+		color: #c3c3c3;
+		font-size: 85%;
+		text-transform: none;
+		font-weight: normal;
+	}
+	.datacoSingle span a{
+		font-family: Arial, Helvetica, sans-serif;
+		color: #c3c3c3;
+		text-decoration: none;
+		font-weight: normal;
+	}
+	.datacoSingle p {
+		margin-bottom: 10px;
+	}
+	.datacoSingle div:last-child{
+		margin-right: 0px;
 	}
 	.titcon {
 		margin-top:25px;
@@ -416,6 +453,14 @@ table {
 		float: left;
 	}
 	.titcon p{
+		font-size: 80%;
+		font-family: Arial, Helvetica, sans-serif;
+		padding-top: 20px;
+		line-height: 135%;	
+		text-align: justify;
+		color: #404040;
+	}
+	.titconSingle p{
 		font-size: 80%;
 		font-family: Arial, Helvetica, sans-serif;
 		padding-top: 20px;
@@ -541,7 +586,7 @@ table {
 		height: 50px;
 	}
 	.acontainer-inner{
-		margin-top: 55px;
+		margin-top: 30px;
 		width: 670px;
 		float: left;
 		font-size: 79%;
@@ -549,10 +594,11 @@ table {
 		line-height: 135%;	
 		color: #404040;
 	}
-	.acontainer1 p{
+	.acontainer-inner p{
 		margin-top:25px;
 	}
-	.acontainer1 p span{
+	
+	.acontainer-inner p span{
 		font-family: myFirstFont, verdana, sans-serif;
 		float:left;
 		padding:4px;
@@ -562,8 +608,7 @@ table {
 		font-weight: bold;
 		line-height: 70%;
 	}
-	.acontainer2 img {
-		float: left;
+	.acontainer-inner img {		
 		padding: 2px;
 		border-color: #cccccc;
 		border-style: solid;
@@ -571,7 +616,7 @@ table {
 		margin-right: 25px;
 		
 	}
-	.acontainer1 blockquote {
+	.acontainer-inner blockquote {
 		margin-left: 55px;
 		border-color: #e8663c;
 		border-style: solid;
@@ -580,21 +625,27 @@ table {
 		font-style: italic;
 		color: #8f8f8f;
 	}
-	.prism2 {
+	.alignleft {
+		float: left;
+	}
+	.alignright {
+		float: right;
+	}
+	.prism2 div {
 		float:left;
 		width:47%;
 		margin-right:6%;
 	}
-	.prism2:last-child{
+	.prism2 div:last-child{
 		margin-right:0px;
 	}
-	.prism3{
+	.prism3 div{
 		float:left;
 		width:30%;
 		margin-right:5%;
 		margin-bottom:15px;
 	}
-	.prism3:last-child{
+	.prism3 div:last-child{
 		margin-right:0px;
 	}
 	.atext{
@@ -717,6 +768,7 @@ table {
 		line-height: 125%;	
 	}
 	.map {
+		margin-top: 25px;
 		width: 100%;
 		height: 400px;
 	}

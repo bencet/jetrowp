@@ -19,6 +19,7 @@ function jetro_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 825, 510, true );
 	add_image_size( 'small-slide', 140, 120, true);
+	add_image_size( 'blog', 670, 300, true);
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -274,6 +275,6 @@ function alert_text_color ( $atts, $content = null ) {
 			'color' => 'green',
 		), $atts);
 		
-	return '<<div class="atext '.$a['color'].'">'.$content.'</div>';
+	return '<div class="atext '.$a['color'].'">'.$content.'</div>';
 }
 add_shortcode ( 'alert-text', 'alert_text_color' );

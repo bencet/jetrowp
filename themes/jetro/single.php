@@ -9,16 +9,29 @@ get_header(); ?>
 
 	<?php
 		while ( have_posts() ) : the_post(); ?>
-		
+		    
 			<?php if ( has_post_thumbnail() ) { ?>
-				<img class="blog" <?php	the_post_thumbnail(); ?>
+			<?php 
+				$string = array();
+				$tags = get_the_tags();
+				
+			?>
+				<img class="blog" <?php	the_post_thumbnail('blog'); ?>
 			<?php } ?>
 			<div class="datacoSingle">
 				<div>
 					<p>date<br><span><?php the_time('F d, Y') ?></span></p>
 				</div>
 				<div>
-					<p>tags<br><span><?php the_tags( '',',' ); ?></span></p>
+					<p>tags<br><span>
+					<?php 
+						if ($tags) {
+							foreach( $tags as $tag ) {
+								$string[] = $tag->name;
+							}			
+							echo implode( ', ' , $string ); 
+						}?>
+					</span></p>
 				</div>
 				<div>
 					<p>comments<br><span>4</span></p>

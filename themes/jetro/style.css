@@ -20,10 +20,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-
+	
 	line-height: 1;
 }
 
+body  a{
+	
+	color: #777;
+}
 ol, ul {
 
 	list-style: none;
@@ -521,6 +525,30 @@ table {
 		text-decoration:none;
 		display: inline;
 	}
+	span.pages {
+		display: none;
+	}
+	.wp-pagenavi {
+		margin-top:40px;
+		color: #ffffff;
+		font-weight: bold;
+	}
+	.wp-pagenavi span div {
+		float: left;
+		background-color: #e8663c;
+		padding: 5px 9px;
+		margin-right: 4px;
+		text-decoration: none;
+	}
+	.wp-pagenavi a div {
+		float: left;
+		background-color: #f1ad9b;
+		padding: 5px 9px;
+		margin-right: 4px;
+		text-decoration: none;
+		color: #ffffff !important;
+	}
+	
 /* Sidebar formatting */
 
 	.sidebar {
@@ -612,9 +640,7 @@ table {
 		padding: 2px;
 		border-color: #cccccc;
 		border-style: solid;
-		border-width: 2px;
-		margin-right: 25px;
-		
+		border-width: 2px;			
 	}
 	.acontainer-inner blockquote {
 		margin-left: 55px;
@@ -627,9 +653,11 @@ table {
 	}
 	.alignleft {
 		float: left;
+		margin-right: 25px;
 	}
 	.alignright {
 		float: right;
+		margin-left: 25px;
 	}
 	.prism2 div {
 		float:left;
@@ -743,6 +771,38 @@ table {
 	.ppost:last-child{
 		margin-right: 0px;
 	}
+	.popup {
+		position:absolute;
+		top:0px;
+		left:0px;
+		margin:100px auto;
+		width:200px;
+		height:150px;
+		font-family:verdana;
+		font-size:13px;
+		padding:10px;
+		background-color:rgb(240,240,240);
+		border:2px solid grey;
+		z-index:100000000000000000;
+		display:none
+	}
+	.cancel {
+		display:relative;
+		cursor:pointer;
+		margin:0;
+		float:right;
+		height:10px;
+		width:14px;
+		padding:0 0 5px 0;
+		background-color:red;
+		text-align:center;
+		font-weight:bold;
+		font-size:11px;
+		color:white;
+		border-radius:3px;
+		z-index:100000000000000000;
+	}
+
 	
 /*  Contact us formatting */
 
@@ -940,6 +1000,10 @@ table {
 			padding-right: 0px;
 		}
 		.images img {
+			width: 100%;
+			height: auto;
+		}
+		img.blog {
 			width: 100%;
 			height: auto;
 		}

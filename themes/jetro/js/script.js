@@ -36,6 +36,16 @@ jQuery(document).ready(function($){
 		$("a").removeClass("selected");
 	});
 	
+	if ( $('div.line1 h3').text().length > 15 ) {
+        $('div.line1 h3').css({"padding-bottom" : "45px"});
+	}
+	
+	function openPopup() {
+		document.getElementById('porfolioPopup').style.display = 'block';
+	}
+	function closePopup() {
+		document.getElementById('portfolioPopup').style.display = 'none';
+	}
 	
 	function scriptForPortfolio(elemCl, elemId){			
 		var imgInaRow = 4;
